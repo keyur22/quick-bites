@@ -1,0 +1,37 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ff5200;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.navbar .logo {
+  width: auto;
+  height: 50px;
+}
+
+.navbar .links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar .links li {
+  list-style: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navbar .links .login-btn {
+  color: #fff;
+  background: #000;
+  border-radius: 10px;
+  border: 1px solid #000;
+  padding: 10px 15px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+}
