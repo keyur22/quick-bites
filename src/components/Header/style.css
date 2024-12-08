@@ -1,37 +1,26 @@
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background: #ff5200;
+  background: var(--primary-bg-color);
   padding: 10px 20px;
-  color: #fff;
+  color: var(--text-color);
 }
 
 .navbar .logo {
   width: auto;
   height: 50px;
+  margin-right: auto;
 }
 
 .navbar .links {
   display: flex;
   gap: 30px;
   align-items: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-right: 30px;
 }
 
 .navbar .links li {
   list-style: none;
   font-weight: bold;
   cursor: pointer;
-}
-
-.navbar .links .login-btn {
-  color: #fff;
-  background: #000;
-  border-radius: 10px;
-  border: 1px solid #000;
-  padding: 10px 15px;
-  font-weight: bold;
-  cursor: pointer;
-  outline: none;
 }
