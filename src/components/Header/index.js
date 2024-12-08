@@ -11,10 +11,10 @@ const Header = () => {
       <ul className='links'>
         <li>About</li>
         <li>Contact Us</li>
-        <button className='login-btn' onClick={() => setIsLoggedIn(!isLoggedIn)}>
-          {isLoggedIn ? 'Logout' : 'Login'}
-        </button>
       </ul>
+      <button className='primary-btn' onClick={() => setIsLoggedIn(!isLoggedIn)}>
+        {isLoggedIn ? 'Logout' : 'Login'}
+      </button>
     </nav>
   );
 };

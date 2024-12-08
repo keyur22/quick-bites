@@ -1,0 +1,23 @@
+:root {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  --primary-bg-color: #ff5200;
+  --secondary-bg-color: #000;
+  --text-color: #fff;
+}
+
+.primary-btn {
+  color: var(--text-color);
+  background: var(--secondary-bg-color);
+  border: 1px solid var(--secondary-bg-color);
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.5s;
+}
+
+.primary-btn:hover {
+  color: var(--secondary-bg-color);
+  background: var(--text-color);
+}
