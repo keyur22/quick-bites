@@ -2,14 +2,14 @@ import { useEffect, useState } from 'react';
 import { API_URL } from '../../utils/constants';
 import RestaurantList from '../RestaurantList';
 import './style.css';
-
-// Search
-// Restaurant List
+import SearchInput from '../SearchInput';
 
 const RestaurantListContainer = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [restaurantList, setRestaurantList] = useState(null);
   const [error, setError] = useState(null);
+  const [searchText, setSearchText] = useState('');
+  const [filteredRestaurantList, setFilteredRestaurantList] = useState(null);
 
   const getRestaurants = (list) =>
     list.filter((item) => item?.card?.card?.info).map((item) => item?.card?.card?.info);
@@ -21,6 +21,7 @@ const RestaurantListContainer = () => {
       const listData = await apiResp.json();
       setIsLoading(false);
       setRestaurantList(getRestaurants(listData?.data?.cards));
+      setFilteredRestaurantList(getRestaurants(listData?.data?.cards));
     } catch (err) {
       setIsLoading(false);
       setError(err);
@@ -31,10 +32,17 @@ const RestaurantListContainer = () => {
     fetchRestaurants();
   }, []);
 
+  useEffect(() => {
+    const filteredRestaurants = restaurantList?.filter((item) =>
+      item?.name?.toLowerCase()?.includes(searchText?.toLowerCase())
+    );
+    setFilteredRestaurantList(filteredRestaurants);
+  }, [searchText]);
+
   return (
     <>
-      {/* Search input */}
-      <RestaurantList isLoading={isLoading} list={restaurantList} error={error} />
+      <SearchInput searchText={searchText} setSearchText={setSearchText} isLoading={isLoading} />
+      <RestaurantList isLoading={isLoading} list={filteredRestaurantList} error={error} />
     </>
   );
 };

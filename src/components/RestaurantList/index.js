@@ -24,7 +24,11 @@ const RestaurantList = ({ isLoading, list = [], error }) => {
     );
   }
 
-  return null;
+  return (
+    <div className='restaurant-list-info-container'>
+      <span>No Restaurants Available</span>
+    </div>
+  );
 };
 
 export default RestaurantList;

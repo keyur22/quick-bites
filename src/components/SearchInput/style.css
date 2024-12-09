@@ -1,0 +1,25 @@
+.search-restaurant-input-container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-restaurant-input-container .search-restaurant-input {
+  margin: 10px;
+  width: 40vw;
+  height: 48px;
+  padding: 0 20px;
+  font-size: 1rem;
+  line-height: 24px;
+  outline: 0;
+  color: #282c3f;
+  vertical-align: middle;
+  font-weight: 500;
+  background: #fff;
+  border: 1px solid rgba(40, 44, 63, 0.2);
+  border-radius: 15px;
+}
+
+.search-restaurant-input-container .search-restaurant-input:disabled {
+  cursor: not-allowed;
+}
