@@ -57,7 +57,8 @@ export default [
     rules: {
       'react/prop-types': 0,
       indent: ['error', 2],
-      'linebreak-style': 0
+      'linebreak-style': 0,
+      'react/react-in-jsx-scope': 'off'
     }
   }
 ];
