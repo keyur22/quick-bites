@@ -8,8 +8,11 @@
 
 .navbar .logo {
   width: auto;
-  height: 50px;
   margin-right: auto;
+}
+
+.navbar .logo img {
+  height: 50px;
 }
 
 .navbar .links {
@@ -23,4 +26,13 @@
   list-style: none;
   font-weight: bold;
   cursor: pointer;
+}
+
+.navbar .links li a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.navbar .links li a:hover {
+  color: var(--secondary-bg-color);
 }
