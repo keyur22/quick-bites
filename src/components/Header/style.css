@@ -3,7 +3,7 @@
   align-items: center;
   background: var(--primary-bg-color);
   padding: 10px 20px;
-  color: var(--text-color);
+  color: var(--nav-text-color);
 }
 
 .navbar .logo {
@@ -29,7 +29,7 @@
 }
 
 .navbar .links li a {
-  color: var(--text-color);
+  color: var(--nav-text-color);
   text-decoration: none;
 }
 
