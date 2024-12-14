@@ -1,9 +1,23 @@
 .card {
-  width: calc(25% - 8px);
-  border-radius: 16px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-sizing: border-box;
+  width: 22%;
   cursor: pointer;
   transition: all 0.3s;
+  border-radius: 5px;
+  box-shadow: -1px 5px 10px 5px rgba(42, 42, 42, 0.2);
+  padding: 10px;
+
+  @media only screen and (max-width: 1024px) {
+    width: 30%;
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: 45%;
+  }
+
+  @media only screen and (max-width: 525px) {
+    width: 100%;
+  }
 }
 
 .card:hover {
@@ -11,14 +25,14 @@
 }
 
 .card .restaurant-image-container {
-  height: 185px;
-  border-radius: 16px;
+  /* max-height: 150px; */
+  border-radius: 10px;
   overflow: hidden;
 }
 
 .card .restaurant-image-container .restaurant-image {
   width: 100%;
-  height: 185px;
+  height: auto;
   object-fit: cover;
 }
 
@@ -26,14 +40,20 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 15px;
+  padding: 10px 5px;
 }
 
 .card .name {
-  font-weight: 700;
+  font-weight: bolder;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: -0.3px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.card .description .areaName {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -48,13 +68,34 @@
 }
 
 .card .ratings {
+  font-size: 16px;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: space-between;
+  padding-top: 5px;
+
+  @media only screen and (max-width: 525px) {
+    flex-wrap: wrap;
+  }
+}
+
+.card .ratings span {
+  font-size: 15px;
+}
+
+.card .ratings > span:first-child {
+  color: white;
+  padding: 5px;
+  background-color: var(--light-green);
+  border-radius: 5px;
 }
 
 .card .cuisines,
 .card .areaName {
   font-weight: 200;
-  color: rgba(2, 6, 12, 0.6);
+  color: var(--text-color);
 }
 
 .card .cuisines {

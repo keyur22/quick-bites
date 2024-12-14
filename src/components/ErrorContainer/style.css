@@ -1,4 +1,4 @@
-.restaurant-list-info-container {
+.error-container {
   font-size: 16px;
   line-height: 19px;
   font-weight: bold;
@@ -10,8 +10,5 @@
   justify-content: center;
   align-items: center;
   height: 50vh;
-}
-
-.restaurant-list-info-container {
-  color: var(--secondary-bg-color);
+  color: red;
 }

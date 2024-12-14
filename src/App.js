@@ -6,6 +6,7 @@ import './styles/common.css';
 import RestaurantListContainer from './components/RestaurantListContainer';
 import About from './components/About';
 import Contact from './components/Contact';
+import RestaurantDetails from './components/RestaurantDetails';
 
 const App = () => {
   return (
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <RestaurantListContainer />
+      },
+      {
+        path: '/restaurant/:id',
+        element: <RestaurantDetails />
       },
       {
         path: '/about',

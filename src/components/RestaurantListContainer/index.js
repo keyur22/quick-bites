@@ -12,7 +12,9 @@ const RestaurantListContainer = () => {
   const [filteredRestaurantList, setFilteredRestaurantList] = useState(null);
 
   const getRestaurants = (list) =>
-    list.filter((item) => item?.card?.card?.info).map((item) => item?.card?.card?.info);
+    list
+      .filter((item) => item?.card?.card?.info)
+      .map((item) => item?.card?.card?.info);
 
   const fetchRestaurants = async () => {
     setIsLoading(true);
@@ -41,8 +43,16 @@ const RestaurantListContainer = () => {
 
   return (
     <>
-      <SearchInput searchText={searchText} setSearchText={setSearchText} isLoading={isLoading} />
-      <RestaurantList isLoading={isLoading} list={filteredRestaurantList} error={error} />
+      <SearchInput
+        searchText={searchText}
+        setSearchText={setSearchText}
+        isLoading={isLoading}
+      />
+      <RestaurantList
+        isLoading={isLoading}
+        list={filteredRestaurantList}
+        error={error}
+      />
     </>
   );
 };
