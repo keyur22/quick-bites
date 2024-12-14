@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import Logo from '../../../public/logo.png';
-import './style.css';
+// import './style.css';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
-    <nav className='navbar'>
+    <nav className='flex py-3 px-6 bg-orange-500'>
       <Link to='/' className='logo'>
         <img className='logo' src={Logo} alt='Quick Bites Logo' />
       </Link>
@@ -19,7 +19,10 @@ const Header = () => {
           <Link to='/contact'>Contact Us</Link>
         </li>
       </ul>
-      <button className='primary-btn' onClick={() => setIsLoggedIn(!isLoggedIn)}>
+      <button
+        className='primary-btn'
+        onClick={() => setIsLoggedIn(!isLoggedIn)}
+      >
         {isLoggedIn ? 'Logout' : 'Login'}
       </button>
     </nav>
