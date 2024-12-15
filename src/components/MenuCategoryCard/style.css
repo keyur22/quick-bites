@@ -9,30 +9,53 @@
 
 .menu-category-card-container .menu-category-title {
   font-weight: 800;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 20px;
   letter-spacing: -0.3px;
   color: var(--text-color);
   border-bottom: 1px solid rgba(2, 6, 12, 0.25);
-  padding-bottom: 16px;
+  padding: 16px 0;
+  margin: 0;
 }
 
 .menu-category-card-container .category-list {
   display: flex;
   gap: 10px;
-  padding-bottom: 16px;
+  padding: 16px 0;
+}
+
+.menu-category-card-container .category-list:not(:last-child) {
+  border-bottom: 1px solid rgba(2, 6, 12, 0.25);
 }
 
 .menu-category-card-container .category-list .menu-image {
   width: 150px;
   height: 150px;
   border-radius: 12px;
+  position: relative;
+  flex-shrink: 0;
 }
 
 .menu-category-card-container .category-list .menu-image img {
   width: 100%;
   height: 100%;
+  border-radius: 12px;
   object-fit: cover;
+}
+
+.menu-category-card-container .category-list .menu-image button {
+  padding: 5px 10px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.menu-category-card-container .category-list .menu-image button:hover {
+  background: var(--light-green);
+  color: white;
 }
 
 .menu-category-card-container .category-list .menu-category-card-description {
@@ -59,24 +82,23 @@
   .menu-category-card-description
   .cuisines {
   font-size: 16px;
-  line-height: 20px;
+  line-height: 22px;
   letter-spacing: -0.3px;
-  color: var(--text-color);
 }
 
 .menu-category-card-container
   .category-list
   .menu-category-card-description
   .name {
-  font-weight: 200;
-  font-size: 14px;
+  font-size: 18px;
+  color: black;
 }
 
 .menu-category-card-container
   .category-list
   .menu-category-card-description
   .price {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .menu-category-card-container
@@ -84,5 +106,4 @@
   .menu-category-card-description
   .cuisines {
   font-weight: 200;
-  font-size: 14px;
 }
